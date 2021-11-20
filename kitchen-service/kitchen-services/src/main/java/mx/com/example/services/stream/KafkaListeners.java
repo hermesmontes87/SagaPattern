@@ -10,7 +10,7 @@ public class KafkaListeners {
 
     static final Logger LOG = LogManager.getLogger(KafkaListeners.class);
 
-    //@KafkaListener(topics = "prueba", groupId = "order")
+    @KafkaListener(topics = "order_events", groupId = "kitchen")
     public void listenGroupFoo(String message) {
         LOG.info("Received Message in group 'foo': " + message);
     }
